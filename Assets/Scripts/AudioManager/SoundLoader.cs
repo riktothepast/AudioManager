@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace AudioManager
+namespace Audio
 {
     public class SoundLoader : MonoBehaviour
     {
@@ -19,7 +19,7 @@ namespace AudioManager
 
         public void PlaySound()
         {
-            AudioManager.Instance.PlaySound(sound);
+            Manager.Instance.PlaySound(sound);
         }
 
     }

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace AudioManager
+namespace Audio
 {
     public class MusicLoader : MonoBehaviour
     {
@@ -19,9 +19,9 @@ namespace AudioManager
         public void PlayMusic()
         {
             if (song)
-                AudioManager.Instance.PlayMusic(song);
+                Manager.Instance.PlayMusic(song);
             else
-                AudioManager.Instance.StopMusic();
+                Manager.Instance.StopMusic();
         }
     }
 }

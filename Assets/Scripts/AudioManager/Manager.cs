@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-namespace AudioManager
+namespace Audio
 {
-    public class AudioManager : Singleton<AudioManager>
+    public class Manager : Singleton<Manager>
     {
         public AudioSource soundSource;
         public AudioSource musicSource;
@@ -71,7 +71,7 @@ namespace AudioManager
             }
         }
 
-        public void PlaySound(AudioClip audioClip, float volume) //it is not necessary to preload sounds in order to play them
+        public void PlaySound(AudioClip audioClip, float volume)
         {
             AudioClip soundClip;
             if (audioClip == null)
