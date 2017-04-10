@@ -121,5 +121,13 @@ namespace Audio
                 }
             }
         }
+
+        /// <summary>
+        /// Mutes current sound, calling it when mute will unmute
+        /// </summary>
+        public void Mute()
+        {
+            musicSource.mute = !musicSource.mute;
+        }
     }
 }
