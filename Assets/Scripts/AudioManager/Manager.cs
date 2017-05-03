@@ -140,7 +140,7 @@ namespace Audio
         }
 
         /// <summary>
-        /// Mutes current sound, calling it when mute will unmute
+        /// Mutes current music, calling it when mute will unmute
         /// </summary>
         public void Mute()
         {
