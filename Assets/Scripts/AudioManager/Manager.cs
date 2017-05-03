@@ -5,8 +5,25 @@ namespace Audio
 {
     public class Manager : Singleton<Manager>
     {
-        public AudioSource soundSource;
-        public AudioSource musicSource;
+        public AudioSource SoundSource
+        {
+            get
+            {
+                return soundSource;
+            }
+        }
+
+        public AudioSource MusicSource
+        {
+            get
+            {
+                return musicSource;
+            }
+        }
+
+        private AudioSource soundSource;
+        private AudioSource musicSource;
+
         private Dictionary<string, AudioClip> soundClips = new Dictionary<string, AudioClip>();
         private AudioClip currentMusicClip = null;
 
@@ -120,6 +137,14 @@ namespace Audio
                     soundClips[resourceName.name] = soundClip;
                 }
             }
+        }
+
+        /// <summary>
+        /// Mutes current music, calling it when mute will unmute
+        /// </summary>
+        public void Mute()
+        {
+            musicSource.mute = !musicSource.mute;
         }
     }
 }
